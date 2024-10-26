@@ -1,0 +1,11 @@
+doplň prekážky
+Doplň prekážky tak, aby sa mapa zaplnila vodou za presne 4 kroky.
+10001001
+00010111
+00100101
+10001001
+01010100
+10000100
+01101000
+squares
+1,1 1,4 3,2

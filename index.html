@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playing Mode - Ako tečie voda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <img src="logo.png" class="center" alt="logo"  width="600" height="150">
+    <h1><span>HRAJ</span></h1>
+    <button id="switch-to-creating" class="large-button">Vytvor nové zadanie</button>
+  </header>
+
+  <div class="main">
+    <div class="level-selector">
+      <button class="level-button" data-level="1">1.Level</button>
+      <button class="level-button" data-level="2">2.Level</button>
+      <button class="level-button" data-level="3">3.Level</button>
+      <button class="level-button" data-level="4">4.Level</button>
+      <button class="level-button" data-level="5">5.Level</button>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid"></div>
+      <div class="grid-navigation">
+        <button id="prev-level" class="nav-button">&lt;&lt;</button>
+        <button id="next-level" class="nav-button">&gt;&gt;</button>
+      </div>
+    </div>
+
+    <!-- Playing Controls -->
+    <section class="control-buttons">
+      <button class="perfbutton" id="start-algorithm">Spusti algoritmus</button>
+      <button class="perfbutton" id="pause-algorithm">Pozastav algoritmus</button>
+      <button class="perfbutton" id="save-solution">Ulož riešenie</button>
+      <button class="perfbutton" id="check-solution">Over riešenie</button>
+      <button class="perfbutton" id="reveal-solution">Ukáž správne riešenie</button>
+    </section>
+
+    <div class="task-controls">
+      <label>Zvoľ farbu vyfarbovania políčok</label>
+      <div class="color-buttons">
+        <button class="color-picker" data-color="white"></button>
+        <button class="color-picker" data-color="deepskyblue"></button>
+        <button class="color-picker" data-color="grey"></button>
+        <button class="color-picker" data-color="green">Odpoveď</button>
+      </div>
+      <label for="cell-number">Napíš číslo vyfarbovaného políčka</label>
+      <input type="number" id="cell-number" placeholder="Zadaj číslo...">
+
+      <!-- File upload for new level -->
+      <label for="file-upload">Nahrať nový level (.txt)</label>
+      <input type="file" id="file-upload" accept=".txt">
+    </div>
+  </div>
+  <footer>
+    <p id="footer-text">Task: Tu bude text zadania...</p>
+    <div class="answer-input">
+      <h4>Správna odpoveď</h4>
+      <input id="correct-answer-input" type="text" placeholder="Napíš správnu odpoveď...">
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</div>
+</body>
+</html>

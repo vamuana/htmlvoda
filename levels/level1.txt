@@ -1,0 +1,9 @@
+čo sa nezaplaví?
+Označ štvorček, ktorý sa nezaplaví.
+00110
+11010
+00110
+01000
+10011
+squares
+2,2

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tvorba Úloh - Ako tečie voda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <img src="logo.png" class="center" alt="logo"  width="600" height="150" style="margin-top: 15px">
+    <h1><span>VYTVÁRAJ</span></h1>
+    <button id="switch-to-playing" class="large-button">Zahraj si</button>
+  </header>
+
+  <div class="main">
+    <div class="creating-tasks">
+      <h3>Tvorba zadania</h3>
+      <div class="creating-items">
+        <label for="rows-input">Počet riadkov:</label>
+        <input id="rows-input" type="number" value="5" min="1">
+      </div>
+      <div class="creating-items">
+        <label for="cols-input">Počet stĺpcov:</label>
+        <input id="cols-input" type="number" value="5" min="1">
+      </div>
+      <div class="creating-items">
+        <label for="size-input">Veľkosť políčok (px):</label>
+        <input id="size-input" type="number" value="50" min="10">
+      </div>
+      <div class="creating-items">
+        <label for="probability-input">Pravdepodobnosť voľných políčok (%):</label>
+        <input id="probability-input" type="number" value="70" min="0" max="100">
+      </div>
+      <div class="creating-items">
+        <label for="category-input">Kategória úlohy:</label>
+        <select id="category-input">
+          <option value="čo sa nezaplaví?">čo sa nezaplaví?</option>
+          <option value="za koľko sekúnd?">za koľko sekúnd?</option>
+          <option value="doplň prekážky, aby trvalo">doplň prekážky, aby trvalo</option>
+        </select>
+      </div>
+      <div class="creating-items">
+        <h4>Úloha</h4>
+        <textarea id="task-input" rows="3" placeholder="Napíš text úlohy..."></textarea>
+      </div>
+      <div class="creating-items">
+        <label for="answer-category-input">Kategória odpovede:</label>
+        <select id="answer-category-input">
+          <option value="number">Číslo</option>
+          <option value="squares">Políčka</option>
+        </select>
+      </div>
+      <div class="creating-items">
+        <h4>Správna odpoveď</h4>
+        <input id="correct-answer-input" type="text" placeholder="Napíš správnu odpoveď...">
+      </div>
+
+      <button class="perfbutton" id="generate-grid">Generovať sieť</button>
+      <button class="perfbutton" id="save-map">Ulož mapu ako .txt</button>
+    </div>
+
+    <!-- Grid and navigation -->
+    <div class="grid-container">
+      <div class="grid"></div>
+    </div>
+
+    <!-- Controls for color -->
+    <div class="task-controls">
+      <label>Zvoľ farbu vyfarbovania políčok</label>
+      <div class="color-buttons">
+        <button class="color-picker" data-color="white"></button>
+        <button class="color-picker" data-color="black"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</div>
+</body>
+</html>
