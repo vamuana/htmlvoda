@@ -395,6 +395,7 @@ function setupCreatingMode() {
         }
     }
 
+
     document.getElementById('save-map').addEventListener('click', () => {
         const taskCategory = document.getElementById('category-input').value;
         const taskDescription = document.getElementById('task-input').value;
@@ -402,7 +403,7 @@ function setupCreatingMode() {
         const answerCategory = document.getElementById('answer-category-input').value;
         let fileContent = taskCategory + '\n' + taskDescription + '\n';
         gridData.forEach(row => {
-            fileContent += row.join(' ') + '\n';
+            fileContent += row.join('') + '\n';
         });
 
         fileContent += answerCategory + '\n';
