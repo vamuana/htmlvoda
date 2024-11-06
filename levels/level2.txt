@@ -7,3 +7,4 @@ Doplň prekážky, aby trvalo zaplavenie 4 sekundy.
 00000
 squares
 2,2 3,3
+all

@@ -9,7 +9,7 @@
 <body>
 <div class="container">
   <header>
-    <img src="logo.png" class="center" alt="logo"  width="600" height="150" style="margin-top: 15px">
+    <img src="logo.png" class="center" alt="logo"  width="600" height="150" style="margin-top: 40px">
     <h1><span>VYTVÁRAJ</span></h1>
     <button id="switch-to-playing" class="large-button">Zahraj si</button>
   </header>
@@ -33,6 +33,31 @@
         <label for="probability-input">Pravdepodobnosť voľných políčok (%):</label>
         <input id="probability-input" type="number" value="70" min="0" max="100">
       </div>
+
+
+      <button class="perfbutton" id="generate-grid" style="width: 100%">Generovať sieť</button>
+      <button class="perfbutton" id="save-map" style="width: 100%">Ulož zadanie ako .txt</button>
+      <label for="uploadTaskButton">Nahrať nový level (.txt)</label>
+      <input type="file" id="uploadTaskButton" accept=".txt">
+
+    </div>
+
+    <!-- Grid and navigation -->
+    <div class="grid-container">
+      <div class="grid"></div>
+    </div>
+
+    <!-- Controls for color -->
+    <div class="task-controls">
+      <label>Zvoľ farbu vyfarbovania políčok</label>
+      <div class="color-buttons">
+        <button class="color-picker" data-color="white"></button>
+        <button class="color-picker" data-color="black"></button>
+        <button class="color-picker" data-color="green">Odpoveď</button>
+      </div>
+      <label>Zvoľ počiatočnú polohu začiatku vylievania</label>
+      <button class="color-picker" data-color="deepskyblue"></button>
+      <button>vylievanie z celého okolia hracej plochy</button>
       <div class="creating-items">
         <label for="category-input">Kategória úlohy:</label>
         <select id="category-input">
@@ -55,23 +80,6 @@
       <div class="creating-items">
         <h4>Správna odpoveď</h4>
         <input id="correct-answer-input" type="text" placeholder="Napíš správnu odpoveď...">
-      </div>
-
-      <button class="perfbutton" id="generate-grid">Generovať sieť</button>
-      <button class="perfbutton" id="save-map">Ulož mapu ako .txt</button>
-    </div>
-
-    <!-- Grid and navigation -->
-    <div class="grid-container">
-      <div class="grid"></div>
-    </div>
-
-    <!-- Controls for color -->
-    <div class="task-controls">
-      <label>Zvoľ farbu vyfarbovania políčok</label>
-      <div class="color-buttons">
-        <button class="color-picker" data-color="white"></button>
-        <button class="color-picker" data-color="black"></button>
       </div>
     </div>
   </div>

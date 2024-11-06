@@ -6,4 +6,5 @@ Za koľko sekúnd sa zaplaví celé územie?
 01000
 10011
 number
-5
+4
+all
