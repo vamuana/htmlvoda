@@ -112,7 +112,7 @@ function setupPlayingMode() {
             newRevealSolutionButton.addEventListener('click', revealCorrectSquares.bind(null, correctAnswer));
         } else if (answerType === 'number') {
             newCheckSolutionButton.addEventListener('click', () => evaluateTimeTask(correctAnswer));
-            newRevealSolutionButton.addEventListener('click', () => alert('Správny čas je ' + correctAnswer + ' sekúnd.'));
+            newRevealSolutionButton.addEventListener('click', () => alert('Správny čas je ' + correctAnswer ));
         } else if (taskType.includes('doplň prekážky')) {
             newCheckSolutionButton.addEventListener('click', () => evaluateBarrierTask(correctAnswer));
             newRevealSolutionButton.addEventListener('click', revealCorrectSquares.bind(null, correctAnswer));
@@ -129,9 +129,9 @@ function setupPlayingMode() {
 
         const correctCells = correctAnswer.split(' ').map(pair => pair.split(',').map(Number));
         if (JSON.stringify(userMarkedCells.sort()) === JSON.stringify(correctCells.sort())) {
-            alert('Correct!');
+            alert('Správne!');
         } else {
-            alert('Incorrect. Try again.');
+            alert('Skús to znova');
         }
     }
 
@@ -140,7 +140,7 @@ function setupPlayingMode() {
         if (userInputTime === parseInt(correctAnswer)) {
             alert('Správne!');
         } else {
-            alert('Nesprávne. Správny čas je ' + correctAnswer + ' sekúnd.');
+            alert('Skús to znova');
         }
     }
 
@@ -156,7 +156,7 @@ function setupPlayingMode() {
         if (JSON.stringify(barriers.sort()) === JSON.stringify(correctCells.sort())) {
             alert('Správne!');
         } else {
-            alert('Nesprávne. Skúste to znova.');
+            alert('Skús to znova');
         }
     }
 
@@ -258,7 +258,6 @@ function setupPlayingMode() {
         visited = new Set();
 
         if (beginningPoints === 'all') {
-            // Original logic for entire boundary
             for (let i = 0; i < cols; i++) {
                 if (gridData[0][i] === '0') {
                     waterFront.push([0, i]);
@@ -285,7 +284,6 @@ function setupPlayingMode() {
                 }
             }
         } else {
-            // Custom beginning points logic
             const startPoints = beginningPoints.split(' ').map(point => point.split(',').map(Number));
             startPoints.forEach(([row, col]) => {
                 if (gridData[row][col] === '0') {
@@ -440,7 +438,6 @@ function setupCreatingMode() {
 
     const entireBoundaryButton = document.querySelector('.color-picker[data-color="deepskyblue"]');
 
-
     let beginningPoints = "all";
     let customStartingPoints = [];
     let correctAnswerPoints = [];
@@ -579,7 +576,7 @@ function setupCreatingMode() {
         if (answerCategory === 'number') {
             document.getElementById('correct-answer-input').value = correctAnswerPointsLine;
         } else {
-            document.getElementById('correct-answer-input').value = ''; // Clear if not applicable
+            document.getElementById('correct-answer-input').value = '';
         }
 
         if (correctAnswerPointsLine.trim() !== '' && answerCategory !== 'number') {
@@ -593,7 +590,7 @@ function setupCreatingMode() {
             customStartingPoints = [];
         } else {
             customStartingPoints = beginningPointsLine.split(' ').map(point => point.split(',').map(Number));
-            beginningPoints = ''; // Set to custom mode since points are explicitly defined
+            beginningPoints = '';
         }
 
         const rows = gridData.length;
