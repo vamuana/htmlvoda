@@ -6,5 +6,5 @@ Označ štvorčeky, ktoré sa nezaplavia.
 0101001
 1011111
 squares
-1,1 1,4 3,2
+1,2 3,2
 all

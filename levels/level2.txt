@@ -6,5 +6,5 @@ Doplň prekážky, aby trvalo zaplavenie 4 sekundy.
 01000
 00000
 squares
-2,2 3,3
+2,2
 all
